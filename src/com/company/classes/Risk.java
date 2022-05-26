@@ -4,7 +4,7 @@ import java.math.BigDecimal;
 import java.util.Date;
 
 public class Risk {
-    private Integer id;
+    private String id;
     private BigDecimal minPrice;
     private BigDecimal maxPrice;
     private Date protectionFrom;
@@ -15,7 +15,7 @@ public class Risk {
     public Risk() {
     }
 
-    public Risk(Integer id, BigDecimal minPrice, BigDecimal maxPrice, Date protectionFrom, Date protectionTo, String description, String policyType) {
+    public Risk(String id, BigDecimal minPrice, BigDecimal maxPrice, Date protectionFrom, Date protectionTo, String description, String policyType) {
         this.id = id;
         this.minPrice = minPrice;
         this.maxPrice = maxPrice;
@@ -25,11 +25,11 @@ public class Risk {
         this.policyType = policyType;
     }
 
-    public Integer getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(String id) {
         this.id = id;
     }
 

@@ -4,7 +4,7 @@ import java.math.BigDecimal;
 import java.util.Date;
 
 public class Policy {
-    private Integer id;
+    private String id;
     private String insuranceHolder;
     private String insuredPerson;
     private String beneficiaryPerson;
@@ -16,7 +16,7 @@ public class Policy {
     public Policy() {
     }
 
-    public Policy(Integer id, String insuranceHolder, String insuredPerson, String beneficiaryPerson, Risk risk, Date startDate, Date endDate, BigDecimal price) {
+    public Policy(String id, String insuranceHolder, String insuredPerson, String beneficiaryPerson, Risk risk, Date startDate, Date endDate, BigDecimal price) {
         this.id = id;
         this.insuranceHolder = insuranceHolder;
         this.insuredPerson = insuredPerson;
@@ -27,11 +27,11 @@ public class Policy {
         this.price = price;
     }
 
-    public Integer getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(String id) {
         this.id = id;
     }
 

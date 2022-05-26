@@ -17,27 +17,8 @@ public class Setup {
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
+
     }
-
-    /*create table policy
-            (
-                    id                text   not null
-                    constraint policy_pk
-                    primary key,
-                    insuranceHolder   text   not null,
-                    insuredPerson     text   not null,
-                    beneficiaryPerson text   not null,
-                    risk              text   not null,
-                    startDate         date   not null,
-                    endDate           date   not null,
-                    price             double not null
-            );
-
-    create unique index policy_id_uindex
-    on policy (id);
-*/
-
-
 
     public void createTablePolicy() {
         String createTableSQL2 = "create table policy" +
@@ -63,16 +44,13 @@ public class Setup {
     public void createTableDamage() {
     String createTableSQL3 = "create table damage" +
             "(" +
-            "    id          int  not null" +
-            "        constraint damages_pk" +
-            "            primary key," +
-            "    policy_id   int  not null" +
-            "        references policy" +
-            "            on update restrict," +
-            "    documents   text not null," +
-            "    damage_type text not null" +
-            "            on update restrict," +
-            "    victim      text not null" +
+            "id text not null" +
+            " constraint damages_pk" +
+            " primary key," +
+            "policy text not null," +
+            "documents text not null," +
+            "damage_type text not null," +
+            "victim text not null" +
             ");";
 
         try {
@@ -104,17 +82,15 @@ public class Setup {
     public void createTableIRisk() {
     String createTableSQL5 = "create table risk" +
             "(" +
-            "id int not null" +
+            "id text not null" +
             " constraint risks_pk" +
             " primary key," +
-            "min_price       Decimal not null," +
-            "max_price       Decimal not null," +
-            "protection_from Date    not null," +
-            "protection_to   Date    not null," +
-            "description     Text    not null," +
-            "policy_type     Text    not null" +
-            " references policy_type" +
-            " on update restrict" +
+            "min_price Decimal not null," +
+            "max_price Decimal not null," +
+            "protection_from Date not null," +
+            "protection_to Date not null," +
+            "description text not null," +
+            "policy_type text not null" +
             ");";
 
         try {

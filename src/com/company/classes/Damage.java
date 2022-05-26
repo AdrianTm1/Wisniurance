@@ -1,7 +1,7 @@
 package com.company.classes;
 
 public class Damage {
-    private Integer id;
+    private String id;
     private String policy;
     private String documents;
     private String damageType;
@@ -10,7 +10,7 @@ public class Damage {
     public Damage() {
     }
 
-    public Damage(Integer id, String policy, String documents, String damageType, String victim) {
+    public Damage(String id, String policy, String documents, String damageType, String victim) {
         this.id = id;
         this.policy = policy;
         this.documents = documents;
@@ -18,11 +18,11 @@ public class Damage {
         this.victim = victim;
     }
 
-    public Integer getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(String id) {
         this.id = id;
     }
 

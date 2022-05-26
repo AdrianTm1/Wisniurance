@@ -3,7 +3,7 @@ package com.company.classes;
 import java.util.Date;
 
 public class Incident {
-    private Integer id;
+    private String id;
     private Date incidentDate;
     private Damage damage;
     private String incidentPlace;
@@ -12,7 +12,7 @@ public class Incident {
     public Incident() {
     }
 
-    public Incident(Integer id, Date incidentDate, Damage damage, String incidentPlace, String incidentCourse) {
+    public Incident(String id, Date incidentDate, Damage damage, String incidentPlace, String incidentCourse) {
         this.id = id;
         this.incidentDate = incidentDate;
         this.damage = damage;
@@ -20,11 +20,11 @@ public class Incident {
         this.incidentCourse = incidentCourse;
     }
 
-    public Integer getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(String id) {
         this.id = id;
     }
 
